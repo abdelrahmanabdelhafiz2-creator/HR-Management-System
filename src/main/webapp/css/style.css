@@ -1,0 +1,2804 @@
+/* ==========================================================
+   HR MANAGEMENT SYSTEM
+   Global Style Sheet
+   Part 1
+   Reset + Variables + Base + Layout + Header + Footer
+========================================================== */
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f7fb;
+
+    color:#333;
+
+    line-height:1.6;
+
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+
+    --primary:#1565c0;
+
+    --primary-dark:#0d47a1;
+
+    --secondary:#64748b;
+
+    --success:#16a34a;
+
+    --danger:#dc2626;
+
+    --warning:#f59e0b;
+
+    --white:#ffffff;
+
+    --black:#222;
+
+    --gray:#e5e7eb;
+
+    --light:#f8fafc;
+
+    --shadow:
+            0 4px 15px rgba(0,0,0,.08);
+
+    --radius:10px;
+
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+main{
+
+    flex:1;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:30px 0;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.page-title h1{
+
+    font-size:32px;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.page-title p{
+
+    color:var(--secondary);
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:75px;
+
+    background:var(--white);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    box-shadow:var(--shadow);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:var(--primary);
+
+}
+
+.navbar{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+.navbar a{
+
+    color:#444;
+
+    font-weight:600;
+
+    padding:10px;
+
+    border-radius:6px;
+
+}
+
+.navbar a:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.user-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.user-box span{
+
+    font-size:14px;
+
+    color:#666;
+
+}
+
+.logout-btn{
+
+    background:var(--danger);
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.logout-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+.page-space{
+
+    height:95px;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    margin-top:60px;
+
+    background:#1e293b;
+
+    color:white;
+
+    padding:25px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.footer a{
+
+    color:white;
+
+}
+
+.footer a:hover{
+
+    color:#93c5fd;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+.btn-add,
+.btn-save,
+.btn-login{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.btn-add:hover,
+.btn-save:hover,
+.btn-login:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btn-view{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:6px;
+
+    margin-right:5px;
+
+    display:inline-block;
+
+}
+
+.btn-view:hover{
+
+    background:#1d4ed8;
+
+}
+
+.btn-edit{
+
+    background:var(--warning);
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:6px;
+
+    margin-right:5px;
+
+    display:inline-block;
+
+}
+
+.btn-edit:hover{
+
+    background:#d97706;
+
+}
+
+.btn-delete{
+
+    background:var(--danger);
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:6px;
+
+}
+
+.btn-delete:hover{
+
+    background:#b91c1c;
+
+}
+
+.btn-cancel{
+
+    background:#64748b;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+}
+
+.btn-cancel:hover{
+
+    background:#475569;
+
+}
+
+/* =========================
+   INLINE FORM
+========================= */
+
+.inline-form{
+
+    display:inline;
+
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+
+.table-wrapper{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    overflow:auto;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+th{
+
+    padding:16px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:16px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+/* ==========================================================
+   DASHBOARD
+========================================================== */
+
+/* =========================
+   Dashboard Page
+========================= */
+
+.dashboard-page{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+/* =========================
+   Statistics Section
+========================= */
+
+.statistics-section{
+
+    margin-bottom:40px;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    border-left:6px solid var(--primary);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.stat-card h3{
+
+    color:var(--secondary);
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+.stat-number{
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    color:var(--primary);
+
+}
+
+/* =========================
+   Employee Overview
+========================= */
+
+.employee-overview{
+
+    margin-top:20px;
+
+}
+
+.employee-overview .section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.employee-overview h2{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+}
+
+/* =========================
+   Dashboard Table
+========================= */
+
+.employee-overview table{
+
+    min-width:900px;
+
+}
+
+.employee-overview td:last-child{
+
+    white-space:nowrap;
+
+}
+
+/* =========================
+   Dashboard Buttons
+========================= */
+
+.employee-overview .btn-view,
+
+.employee-overview .btn-edit,
+
+.employee-overview .btn-delete{
+
+    font-size:14px;
+
+    padding:8px 14px;
+
+}
+
+/* =========================
+   Pagination
+========================= */
+
+.pagination{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.page-link{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:8px;
+
+    background:white;
+
+    color:#333;
+
+    box-shadow:var(--shadow);
+
+    font-weight:bold;
+
+}
+
+.page-link:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.page-link.active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* =========================
+   Small Dashboard Cards
+========================= */
+
+.dashboard-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.dashboard-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.dashboard-card p{
+
+    color:var(--secondary);
+
+}
+
+/* =========================
+   Dashboard Widgets
+========================= */
+
+.widget-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.widget{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.widget-title{
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+/* =========================
+   Quick Actions
+========================= */
+
+.quick-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.quick-actions a{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.quick-actions a:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* =========================
+   Recent Activity
+========================= */
+
+.activity-list{
+
+    list-style:none;
+
+}
+
+.activity-list li{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.activity-list li:last-child{
+
+    border-bottom:none;
+
+}
+
+.activity-title{
+
+    font-weight:bold;
+
+    color:#333;
+
+}
+
+.activity-date{
+
+    color:var(--secondary);
+
+    font-size:14px;
+
+}
+
+/* =========================
+   Dashboard Responsive
+========================= */
+
+@media(max-width:1100px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .widget-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .dashboard-page{
+
+        width:95%;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .employee-overview h2{
+
+        font-size:24px;
+
+    }
+
+    .pagination{
+
+        flex-wrap:wrap;
+
+    }
+
+}
+/* ==========================================================
+   EMPLOYEES PAGE
+========================================================== */
+
+/* =========================
+   Employees Page
+========================= */
+
+.employees-page{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+/* =========================
+   Toolbar
+========================= */
+
+.toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+    flex-wrap:wrap;
+
+}
+
+/* =========================
+   Search Form
+========================= */
+
+.search-form{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.search-form input{
+
+    width:320px;
+
+    padding:12px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:8px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.search-form input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(21,101,192,.15);
+
+}
+
+.btn-search{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.btn-search:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* =========================
+   Employee Table Section
+========================= */
+
+.employee-table-section{
+
+    margin-top:20px;
+
+}
+
+.employee-table-section table{
+
+    min-width:1200px;
+
+}
+
+/* =========================
+   Employee Name
+========================= */
+
+.employee-table-section td:nth-child(2){
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+/* =========================
+   Email
+========================= */
+
+.employee-table-section td:nth-child(3){
+
+    color:var(--secondary);
+
+}
+
+/* =========================
+   Salary
+========================= */
+
+.employee-table-section td:nth-child(7){
+
+    font-weight:bold;
+
+    color:var(--success);
+
+}
+
+/* =========================
+   Actions Column
+========================= */
+
+.employee-table-section td:last-child{
+
+    white-space:nowrap;
+
+}
+
+.employee-table-section .btn-view,
+
+.employee-table-section .btn-edit,
+
+.employee-table-section .btn-delete{
+
+    margin-bottom:5px;
+
+}
+
+/* =========================
+   Add Employee Button
+========================= */
+
+.page-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/* =========================
+   Empty State
+========================= */
+
+.empty-state{
+
+    background:white;
+
+    padding:60px 20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.empty-state h2{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.empty-state p{
+
+    color:var(--secondary);
+
+    margin-bottom:25px;
+
+}
+
+/* =========================
+   Employee Badge
+========================= */
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.badge-it{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+}
+
+.badge-hr{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.badge-finance{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.badge-manager{
+
+    background:#ede9fe;
+
+    color:#6d28d9;
+
+}
+
+/* =========================
+   Employee Card
+========================= */
+
+.employee-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.employee-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.employee-card p{
+
+    color:var(--secondary);
+
+}
+
+/* =========================
+   Employee Grid
+========================= */
+
+.employee-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+/* =========================
+   Employees Responsive
+========================= */
+
+@media(max-width:992px){
+
+    .toolbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .search-form{
+
+        width:100%;
+
+    }
+
+    .search-form input{
+
+        width:100%;
+
+    }
+
+    .btn-search{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .employees-page{
+
+        width:95%;
+
+    }
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .page-actions{
+
+        width:100%;
+
+    }
+
+    .page-actions .btn-add{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .employee-table-section{
+
+        overflow-x:auto;
+
+    }
+
+}
+/* ==========================================================
+   ADD EMPLOYEE & GLOBAL FORMS
+==========================================================*/
+
+/* =========================
+   Add Employee Page
+========================= */
+
+.add-employee-page{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+/* =========================
+   Form Section
+========================= */
+
+.form-section{
+
+    margin-top:20px;
+
+}
+
+/* =========================
+   Form Container
+========================= */
+
+.form-container{
+
+    background:var(--white);
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =========================
+   Form Grid
+========================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+/* =========================
+   Form Group
+========================= */
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* =========================
+   Labels
+========================= */
+
+.form-group label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:var(--black);
+
+}
+
+/* =========================
+   Inputs
+========================= */
+
+.form-group input,
+
+.form-group select,
+
+.form-group textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:8px;
+
+    outline:none;
+
+    background:var(--white);
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+/* =========================
+   Focus
+========================= */
+
+.form-group input:focus,
+
+.form-group select:focus,
+
+.form-group textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(21,101,192,.15);
+
+}
+
+/* =========================
+   Placeholder
+========================= */
+
+.form-group input::placeholder,
+
+.form-group textarea::placeholder{
+
+    color:#9ca3af;
+
+}
+
+/* =========================
+   Select
+========================= */
+
+.form-group select{
+
+    cursor:pointer;
+
+}
+
+/* =========================
+   Textarea
+========================= */
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+/* =========================
+   Readonly
+========================= */
+
+input[readonly]{
+
+    background:#f1f5f9;
+
+}
+
+/* =========================
+   Disabled
+========================= */
+
+input:disabled,
+
+select:disabled{
+
+    background:#f3f4f6;
+
+    cursor:not-allowed;
+
+}
+
+/* =========================
+   Required
+========================= */
+
+.form-group label::after{
+
+    content:" *";
+
+    color:var(--danger);
+
+}
+
+/* =========================
+   Small Text
+========================= */
+
+.form-text{
+
+    font-size:13px;
+
+    color:var(--secondary);
+
+    margin-top:6px;
+
+}
+
+/* =========================
+   Validation
+========================= */
+
+.input-error{
+
+    border-color:var(--danger)!important;
+
+}
+
+.input-success{
+
+    border-color:var(--success)!important;
+
+}
+
+.error-message{
+
+    color:var(--danger);
+
+    font-size:13px;
+
+    margin-top:6px;
+
+}
+
+.success-message{
+
+    color:var(--success);
+
+    font-size:13px;
+
+    margin-top:6px;
+
+}
+
+/* =========================
+   Form Actions
+========================= */
+
+.form-actions{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+}
+
+/* =========================
+   Save Button
+========================= */
+
+.btn-save{
+
+    min-width:170px;
+
+    text-align:center;
+
+}
+
+/* =========================
+   Cancel Button
+========================= */
+
+.btn-cancel{
+
+    min-width:150px;
+
+    text-align:center;
+
+}
+
+/* =========================
+   Checkbox
+========================= */
+
+.checkbox-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.checkbox-group input{
+
+    width:auto;
+
+}
+
+/* =========================
+   Radio
+========================= */
+
+.radio-group{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+}
+
+.radio-group input{
+
+    width:auto;
+
+}
+
+/* =========================
+   File Upload
+========================= */
+
+input[type=file]{
+
+    padding:10px;
+
+}
+
+/* =========================
+   Form Divider
+========================= */
+
+.form-divider{
+
+    margin:35px 0;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+/* =========================
+   Two Columns
+========================= */
+
+.two-columns{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+/* =========================
+   Three Columns
+========================= */
+
+.three-columns{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+/* =========================
+   Full Width
+========================= */
+
+.full-width{
+
+    grid-column:1/-1;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:992px){
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .two-columns{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .three-columns{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .add-employee-page{
+
+        width:95%;
+
+    }
+
+    .form-container{
+
+        padding:25px;
+
+    }
+
+    .form-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .btn-save,
+
+    .btn-cancel{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+/* ==========================================================
+   EMPLOYEE DETAILS
+========================================================== */
+
+/* =========================
+   Employee Details Page
+========================= */
+
+.employee-details-page{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+/* =========================
+   Profile Section
+========================= */
+
+.profile-section{
+
+    margin-bottom:35px;
+
+}
+
+/* =========================
+   Profile Card
+========================= */
+
+.profile-card{
+
+    background:var(--white);
+
+    border-radius:12px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =========================
+   Profile Header
+========================= */
+
+.profile-header{
+
+    margin-bottom:30px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    padding-bottom:15px;
+
+}
+
+.profile-header h2{
+
+    color:var(--primary);
+
+    font-size:26px;
+
+}
+
+/* =========================
+   Profile Grid
+========================= */
+
+.profile-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+/* =========================
+   Profile Item
+========================= */
+
+.profile-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#f8fafc;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    border:1px solid #e5e7eb;
+
+}
+
+.profile-item label{
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    color:var(--secondary);
+
+    margin-bottom:8px;
+
+}
+
+.profile-item span{
+
+    font-size:17px;
+
+    color:var(--black);
+
+    font-weight:600;
+
+}
+
+/* =========================
+   Profile Actions
+========================= */
+
+.profile-actions{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+/* =========================
+   History Section
+========================= */
+
+.history-section{
+
+    margin-top:35px;
+
+}
+
+.history-section h2{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+/* =========================
+   History Table
+========================= */
+
+.history-section table{
+
+    min-width:850px;
+
+}
+
+.history-section tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* =========================
+   Table Cell Alignment
+========================= */
+
+.history-section td,
+
+.history-section th{
+
+    vertical-align:middle;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:992px){
+
+    .profile-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .employee-details-page{
+
+        width:95%;
+
+    }
+
+    .profile-card{
+
+        padding:25px;
+
+    }
+
+    .profile-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .profile-actions .btn-edit,
+
+    .profile-actions .btn-delete{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .history-section{
+
+        overflow-x:auto;
+
+    }
+
+}
+/* ==========================================================
+   DEPARTMENTS
+========================================================== */
+
+/* =========================
+   Departments Page
+========================= */
+
+.departments-page{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+/* =========================
+   Department Grid
+========================= */
+
+.department-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    margin-top:25px;
+
+}
+
+/* =========================
+   Department Card
+========================= */
+
+.department-card{
+
+    background:var(--white);
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    border-top:5px solid var(--primary);
+
+    transition:.3s;
+
+}
+
+.department-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.department-card h2{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.department-card p{
+
+    color:var(--secondary);
+
+    margin-bottom:8px;
+
+}
+
+.department-card span{
+
+    display:block;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:var(--success);
+
+    margin-bottom:25px;
+
+}
+
+/* =========================
+   Department Actions
+========================= */
+
+.card-actions{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================================
+   PROMOTIONS
+========================================================== */
+
+.promotions-page{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+.promotions-page table{
+
+    min-width:1000px;
+
+}
+
+.promotions-page td:nth-child(2),
+
+.promotions-page td:nth-child(3){
+
+    font-weight:600;
+
+}
+
+.promotions-page td:nth-child(5){
+
+    color:var(--success);
+
+    font-weight:bold;
+
+}
+
+/* ==========================================================
+   BONUSES
+========================================================== */
+
+.bonuses-page{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+.bonuses-page table{
+
+    min-width:850px;
+
+}
+
+.bonuses-page td:nth-child(2){
+
+    color:var(--success);
+
+    font-weight:bold;
+
+}
+
+.bonuses-page td:nth-child(3){
+
+    color:var(--secondary);
+
+}
+
+/* ==========================================================
+   FEEDBACK
+========================================================== */
+
+.feedback-page{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:30px 0 60px;
+
+}
+
+.feedback-page table{
+
+    min-width:900px;
+
+}
+
+/* Rating */
+
+.feedback-page td:nth-child(2){
+
+    font-weight:bold;
+
+    color:#f59e0b;
+
+}
+
+/* Comment */
+
+.feedback-page td:nth-child(3){
+
+    color:var(--secondary);
+
+}
+
+/* ==========================================================
+   SHARED TABLE PAGES
+========================================================== */
+
+.promotions-page .table-wrapper,
+
+.bonuses-page .table-wrapper,
+
+.feedback-page .table-wrapper{
+
+    margin-top:25px;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media(max-width:992px){
+
+    .department-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .card-actions .btn-view,
+
+    .card-actions .btn-delete{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .departments-page,
+
+    .promotions-page,
+
+    .bonuses-page,
+
+    .feedback-page{
+
+        width:95%;
+
+    }
+
+    .promotions-page,
+
+    .bonuses-page,
+
+    .feedback-page{
+
+        overflow-x:auto;
+
+    }
+
+}
+/* ==========================================================
+   LOGIN PAGE
+========================================================== */
+
+.login-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#1565c0,#0d47a1);
+
+    padding:30px;
+
+}
+
+/* =========================
+   Login Card
+========================= */
+
+.login-card{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:var(--white);
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.login-card h1{
+
+    color:var(--primary);
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:var(--secondary);
+
+    margin-bottom:30px;
+
+}
+
+.login-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.login-card .btn-login{
+
+    width:100%;
+
+    margin-top:10px;
+
+}
+
+/* =========================
+   Login Links
+========================= */
+
+.login-links{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+.login-links a{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.login-links a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.mt-10{margin-top:10px;}
+.mt-20{margin-top:20px;}
+.mt-30{margin-top:30px;}
+.mt-40{margin-top:40px;}
+
+.mb-10{margin-bottom:10px;}
+.mb-20{margin-bottom:20px;}
+.mb-30{margin-bottom:30px;}
+.mb-40{margin-bottom:40px;}
+
+.p-10{padding:10px;}
+.p-20{padding:20px;}
+.p-30{padding:30px;}
+
+.w-100{
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   COMMON ANIMATION
+========================================================== */
+
+.stat-card,
+.department-card,
+.profile-card,
+.form-container,
+.table-wrapper,
+.login-card{
+
+    transition:.3s ease;
+
+}
+
+.stat-card:hover,
+.department-card:hover,
+.profile-card:hover,
+.form-container:hover,
+.login-card:hover{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================================
+   INPUT TRANSITIONS
+========================================================== */
+
+input,
+select,
+textarea,
+button{
+
+    transition:.3s ease;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#b0bec5;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#78909c;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eceff1;
+
+}
+
+/* ==========================================================
+   GLOBAL RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+
+    .header{
+
+        padding:0 20px;
+
+        flex-wrap:wrap;
+
+        height:auto;
+
+        min-height:75px;
+
+    }
+
+    .navbar{
+
+        gap:12px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .footer{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .footer-links{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .header{
+
+        position:relative;
+
+        padding:20px;
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .navbar{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        width:100%;
+
+    }
+
+    .navbar a{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .user-box{
+
+        flex-direction:column;
+
+    }
+
+    .page-space{
+
+        display:none;
+
+    }
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .table-wrapper{
+
+        overflow-x:auto;
+
+    }
+
+    .login-card{
+
+        padding:30px 25px;
+
+    }
+
+    .login-links{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        align-items:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    body{
+
+        font-size:14px;
+
+    }
+
+    .page-title h1{
+
+        font-size:26px;
+
+    }
+
+    .btn-add,
+    .btn-save,
+    .btn-login,
+    .btn-cancel{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .btn-view,
+    .btn-edit,
+    .btn-delete{
+
+        display:block;
+
+        width:100%;
+
+        margin:5px 0;
+
+        text-align:center;
+
+    }
+
+}
+/* ==========================================================
+   HOME PAGE
+========================================================== */
+
+.home-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.home-logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#1e3a8a;
+}
+
+.home-nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.home-nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.home-nav a:hover{
+    color:#2563eb;
+}
+
+.home-login-btn{
+    background:#2563eb;
+    color:#fff !important;
+    padding:10px 22px;
+    border-radius:8px;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:#f4f8ff;
+}
+
+.hero h1{
+    font-size:48px;
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#555;
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.hero-btn:hover{
+    background:#1d4ed8;
+}
+
+.features{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.feature-card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.feature-card h3{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.about{
+    padding:80px 50px;
+    background:#eef5ff;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.home-footer{
+    background:#1e3a8a;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+}
+.logo a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.logo a:hover{
+    color:inherit;
+}
+
+/* ==========================================================
+   END OF FILE
+========================================================== */

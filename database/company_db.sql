@@ -46,12 +46,6 @@ CREATE TABLE `department` (
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `department`
---
-
-INSERT INTO `department` (`id`, `name`) VALUES
-(1, 'IT');
 
 -- --------------------------------------------------------
 
@@ -70,13 +64,6 @@ CREATE TABLE `employee` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `employee`
---
-
-INSERT INTO `employee` (`id`, `name`, `email`, `salary`, `role`, `department_id`, `manager_id`, `password`) VALUES
-(1, 'Ahmed', 'ahmed@test.com', 15000.00, 'Manager', 1, NULL, '123'),
-(2, 'Ali', 'ali@outlook.com', 8000.00, 'Developer', 1, 1, '1');
 
 -- --------------------------------------------------------
 
@@ -92,12 +79,6 @@ CREATE TABLE `feedback` (
   `feedback_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `feedback`
---
-
-INSERT INTO `feedback` (`id`, `employee_id`, `rate`, `comment`, `feedback_date`) VALUES
-(1, 2, 5, 'Great company', '2026-07-18');
 
 -- --------------------------------------------------------
 
@@ -128,12 +109,6 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(1, 'ali', 'ali@gmail.com', '123456');
 
 --
 -- Indexes for dumped tables
